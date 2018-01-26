@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Roulette Simulator</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="game-js/roulette.js"></script>
+        <script>function spinIt() {
+            $('#prompt').text(spinRoulette());
+            $('#results').html(getResults());
+            }
+            window.onload = function () {
+            $('#info').html(roulette.toTable());
+            };
+        </script>
+    </head>
+    <body style="width:80%; margin-left:auto; margin-right:auto;">
+        <h1>Roulette Simulator</h1>
+        <table id="info" style="width: 600px;"></table>
+        <p></p>
+        <p>Try collecting special 2nd-Chance items from duplicate Gems!</p>
+        <p></p>
+        <button onclick="spinIt()">Spin</button>
+        <p id="prompt" style="font-weight: bold;"></p>
+        <table id="results" style="width: 600px;"></table>
+    </body>
+</html>
